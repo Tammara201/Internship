@@ -1,0 +1,421 @@
+LIFESTYLES WEBPAGE
+
+HTML
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">        
+        <link rel="stylesheet" type="text/css" href="./static/stylesheet.css">
+        
+        <title>Central Oregon Activities</title>
+    </head>
+
+    <body> 
+       
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-md">   
+        <div class="container-fluid" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home</a>
+                </li>
+
+                <li class="nav-item active"></li>
+                <a class="nav-link" href="#hikes">Hikes</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#preparation">Preparation</a>
+                </li>           
+
+                <li class="nav-item active">
+                <a class="nav-link" href="#after">After the Hike</a>            
+                </li>
+            </ul> 
+            
+            <button onclick="darkFunction()" class="btn btn-sm btn-outline-secondary" style="z-index: 99;">Toggle dark mode</button>
+
+            <form class="d-flex">
+                                                                           
+                <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="modal" 
+                data-bs-target="#myModal">Subscription</button>                
+            </form>            
+
+        </div>    
+        </nav>
+        <!--End NavBar-->
+        
+            <!--Content-->             
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title" id="modalLabel">Email Newsletter Sign Up</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="https://formspree.io/f/myybozpp" method="POST" onsubmit='this.submit();this.reset();return false;'>
+                            <div class="form-group">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" class="form-control" id="lastName" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" class="form-control" id="firstName" name="name">                                
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email" name="_replyto">
+                            </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox">&nbsp;&nbsp;I Accept terms and conditions</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox">&nbsp;&nbsp;I Agree to receive emails</label>
+                            </div>
+                            <button type="submit" class="btn btn-outline-secondary">Submit</button>        
+                          </form>                        
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+        <!--End Modal Section-->
+
+        <div id="page-container">       
+        <div id="content-wrap"> 
+
+            <!--Hikes Section-->
+            <section id="hikes">
+            <!--Carousel-->
+            <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselCaptions" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselCaptions" data-bs-slide-to="2"></li>
+                    <li data-bs-target="#carouselCaptions" data-bs-slide-to="3"></li>
+                </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./static/images/smithrock2.jpg" class="d-block w-100" alt="smithrock">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h3>Smith Rock</h3>
+                    <p>At Smith Rock is know as the birthplace of American sport climbing. Cliffs of tuff and<br>
+                        basalt are ideal for rock climbing of all difficulty levels. There are aslo many trails of varying<br>
+                        difficulty. If you are looking for a real challenge and an amazing view give Misery Ridge a try.</p>
+                    </div>
+                </div>
+
+                    <div class="carousel-item">
+                        <img src="./static/images/greenlakes.jpg" class="d-block w-100" alt="greenlakes">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h3>Green Lakes</h3>
+                        <p>Green Lakes trail is one of the most popular day hike and backpacking destinations in<br>
+                            Central Oregon, and for good reason. This hike takes you through a variety of terrain-<br>
+                            including waterfalls, meadows, lava flows and lots of old growth trees. The most popular<br>
+                            trailhead is the official Green Lakes/Soda Creek trailhead right off of the Cascade Lakes Highway.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="./static/images/toddlake.jpg" class="d-block w-100" alt="toddlake">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h3>Todd Lake</h3>
+                        <p>Todd Lake trail is the perfect spot for a leisurely stroll or for young kids.<br>
+                            The trail is flat but you do not compromise on views. Early August is a great<br>
+                            time to take kids on this hike, there are literally thousands of frogs and tadpoles.<br>
+                            The water is shallow and warm, perfect for little ones to take a swim.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="./static/images/mirrorlake.jpg" class="d-block w-100" alt="mirrorlake">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h3>Mirror Lake</h3>
+                        <p>Sisters Mirror Lake Loop via Mirror Lakes Trail is a 10 mile moderately difficult trail.<br>
+                            If you are feeling adventurous, go into the treeline on the other side of the lake. You will<br>
+                            find the hidden lakes Lancelot and Camelot.</p>
+                        </div>
+                    </div>
+                </div> <!--End carousel-inner-->
+
+                    <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselCaptions" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </a>
+            </div> <!--End Carousel captions-->
+        
+            </section> <!--End Hikes Section-->
+
+            <!--Preparation Section-->
+            <section id="preparation">
+                <div class="container">
+                    <h1>BEFORE YOU GO</h1>
+                    <h6>Central Oregon has an amazing search and rescue team, 
+                        but you don't want to use them.  Make sure you are prepared.</h6>
+                    <div class="row">
+                        <div class="col-sm-6" style="font-weight: bold;">Preparation                           
+                        </div>
+                        <div class="col-sm-6" style="font-weight: bold;">Pack                        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Let someone know where you are going<br>
+                            Dress in layers<br>
+                            Wear good hiking shoes<br>                            
+                        </div>
+                        <div class="col-sm-6">
+                            Plenty of food and water<br>
+                            Map and compass<br>
+                            First-aid kit<br>
+                        </div>
+                    </div>                    
+                </div>
+            </section> <!--End Preparation Section-->
+
+            <!--After Section-->
+            <section id="after">
+                <h1>WHEN YOU'RE DONE</h1>
+                    <h6>In addition to great hiking Central Oregon is well known for their many locations
+                        to enjoy good food and beer.<br> Whether you are looking for a special dining experience or a casual outdoor spot to
+                        grab something to eat, there is something for everyone.</h6>
+
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                              <div class="card h-100">
+                                <img src="./static/images/finedining.jpg" class="card-img-top" alt="zydeco">
+                                <div class="card-body">
+                                  <h5 class="card-title">Zydeco</h5>
+                                  <p class="card-text">If you are looking for a fine dining experience Zydeco is a perfect choice. Northwestern cuisine with a Souther twist. They also have an extensive wine list and incredible desserts.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://www.zydecokitchen.com" target="new">Zydeco</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="card h-100">
+                                <img src="./static/images/pub.jpg" class="card-img-top" alt="pub">
+                                <div class="card-body">
+                                    <h5 class="card-title">Deschutes Brewery</h5>
+                                    <p class="card-text">Deschutes Brewery was founded 32 years ago and was one of the countries original microbreweries. Voted Bend's best brewery in 2020, Deschutes is known for such products as Black Butte Porter and Mirror Pond Pale Ale. </p>
+                                </div>
+                                <div class="card-footer">
+                                  <a href="https://www.deschutesbrewery.com" target="new">Deschutes Brewery</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="card h-100">
+                                <img src="./static/images/foodtruck.jpg" class="card-img-top" alt="foodtruck">
+                                <div class="card-body">
+                                    <h5 class="card-title">Food Trucks</h5>
+                                    <p class="card-text">Food truck lots are a great way to sample a variety of local food and beverages. With so many to choose from, you will have a hard time picking a favorite.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://www.visitbend.com/food-drink/restaurants/food-carts/" target="new">Food Trucks</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                        <a href="https://www.visitbend.com/food-drink" target="new">Bend Restaurants</a>
+            </section> <!--End After Section-->
+        
+            <!--End Content-->
+            <!--Scroll to top button-->
+            <button class="scrollToTopBtn">Top</button>
+        </div>  <!--End content-wrap-->
+
+        
+            <!--footer-->
+            <footer id="footer">
+                <center><p>Central Oregon&nbsp;&nbsp;&nbsp;&nbsp;Author:&nbsp;Tammara&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;Email:&nbsp;waterman2712@gmail.com</p></center><br>
+            </footer>
+           
+    </div> <!--End page-container--> 
+
+    
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+        <script src="./static/scripts.js"></script> 
+    </body>
+</html>
+
+CSS
+body {background-color: rgb(219, 135, 104);}
+nav {background-color:  bisque; color: rgb(80, 62, 62);}
+h1   {color: rgb(80, 62, 62); padding-top: 25px;}
+h2   {color: rgb(80, 62, 62);}
+h3   {color: whitesmoke;}
+h4   {color: rgb(80, 62, 62);}
+h5   {color: whitesmoke;}
+h6   {color: rgb(80, 62, 62); padding-bottom: 25px;}
+p    {color: whitesmoke;}
+a   {color: rgb(80, 62, 62);}
+
+/*Dark mode*/
+body.dark-mode * {
+  background-color: black;
+  color: white;
+}
+
+/*Add space between buttons in navbar*/
+.btn {
+  margin: 5px;
+}
+
+/*Scroll to top button*/
+.scrollToTopBtn {
+  background-color: bisque;
+  border: 1px solid rgb(80, 62, 62);
+  border-radius: 1px;
+  color: rgb(80, 62, 62);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all .5s ease
+}
+    
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+/*Ensures footer stays at bottom*/
+#page-container {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+/*Carousel formatting*/
+.carousel .carousel-item {
+  height: 500px;
+}
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+/*Moves search box/text to right*/
+.d-flex {
+  position: absolute;
+  right: 0px;
+  width: 300px;  
+  padding: 10px;
+}
+
+/*Adds extra space for check boxes in form*/
+.checkbox {   
+  padding: 10px;  
+}
+
+.card-body {
+  background-color: bisque;
+  color:rgb(80, 62, 62);  
+}
+
+.card-body > * {
+  background-color: bisque;
+  color:rgb(80, 62, 62);  
+}
+
+.card-footer {
+  background-color: bisque;
+  color:rgb(80, 62, 62);
+}
+
+/*Footer height*/
+#content-wrap {
+  padding-bottom: 2.5rem;    
+}
+
+/*Footer height*/
+#footer {    
+  position: absolute;
+  padding-top: 25px;
+  bottom: 0px;
+  width: 100%;
+  height: 2.5rem;            
+}
+
+
+
+JavaScript
+
+//Get the button scroll to top
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
+var rootElement = document.documentElement
+
+function handleScroll() {
+  // Display button when .80 through page
+  var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+  if ((rootElement.scrollTop / scrollTotal ) > 0.80) {
+    // Show button
+    scrollToTopBtn.classList.add("showBtn")
+  } else {
+    // Hide button
+    scrollToTopBtn.classList.remove("showBtn")
+  }
+}
+
+function scrollToTop() {
+  // Scroll to top
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+scrollToTopBtn.addEventListener("click", scrollToTop)
+document.addEventListener("scroll", handleScroll)
+
+// Modal
+var myModal = document.getElementById('myModal')
+var modalLabel = document.getElementById('modalLabel')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  modalLabel.focus()
+})
+
+function darkFunction() {
+  var element = document.body
+  element.classList.toggle("dark-mode");  
+  }
+
+
+
