@@ -114,6 +114,7 @@
 ### Modal and Sign Up Form with Functionality
 #### Implemented an email sign up form and linked that to an email to receive notification of requests.
 
+##### HTML
 ```
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -149,6 +150,7 @@
                 </div>
             </div> 
 ```
+
 ##### JavaScript
 ```
 // Modal
