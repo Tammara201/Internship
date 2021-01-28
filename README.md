@@ -6,10 +6,14 @@
 
 #### Below are descriptions of the tasks I worked on and a brief description of each. Examples of this work are below and more detailed examples can be found in the Code Example folder within the Portfolio repository.
 
+## Examples of work
+
 ### Grid System
 #### Developed a grid system to display preparation recommendations.
 
-``` <section id="preparation">
+##### HTML
+```
+<section id="preparation">
                 <div class="container">
                     <h1>BEFORE YOU GO</h1>
                     <h6>Central Oregon has an amazing search and rescue team, 
@@ -33,12 +37,14 @@
                         </div>
                     </div>                    
                 </div>
-            </section> ```
-
+</section>
+```
 ### Carousel
 #### Created a carousel to show pictures and descriptions of various hikes.
 
-``` <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+##### HTML
+```
+<div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"></li>
                     <li data-bs-target="#carouselCaptions" data-bs-slide-to="1"></li>
@@ -88,9 +94,11 @@
                             find the hidden lakes Lancelot and Camelot.</p>
                         </div>
                     </div>
-                </div> ```
-                
-``` /*Carousel formatting*/
+                </div>
+```
+ ##### CSS               
+```
+/*Carousel formatting*/
 .carousel .carousel-item {
   height: 500px;
 }
@@ -100,12 +108,14 @@
     top: 0;
     left: 0;
     min-height: 500px;
-} ```
+} 
+```
 
 ### Modal and Sign Up Form with Functionality
 #### Implemented an email sign up form and linked that to an email to receive notification of requests.
 
-``` <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+```
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -137,23 +147,39 @@
                     </div>                    
                 </div>
                 </div>
-            </div> ```
+            </div> 
+```
+##### JavaScript
+```
+// Modal
+var myModal = document.getElementById('myModal')
+var modalLabel = document.getElementById('modalLabel')
 
-### Back to Top Button and Dark Theme
-#### Created dark theme and back to top buttons.
+myModal.addEventListener('shown.bs.modal', function () {
+  modalLabel.focus()
+})
+```
+
+### Dark Theme
+#### Created dark theme toggle button.
 
 ##### HTML
-``` <button onclick="darkFunction()" class="btn btn-sm btn-outline-secondary" style="z-index: 99;">Toggle dark mode</button> ```
+```
+<button onclick="darkFunction()" class="btn btn-sm btn-outline-secondary" style="z-index: 99;">Toggle dark mode</button> 
+```
 
 ##### CSS
-``` /*Dark mode*/
+```
+/*Dark mode*/
 body.dark-mode * {
   background-color: black;
   color: white;
-} ```
+} 
+```
 
 ##### JavaScript
-``` //Get the button scroll to top
+```
+//Get the button scroll to top
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
 var rootElement = document.documentElement
 
@@ -167,10 +193,15 @@ function handleScroll() {
     // Hide button
     scrollToTopBtn.classList.remove("showBtn")
   }
-} ```
+} 
+```
+
+### Back to Top Button
+#### Created a back to top buttons that appears when you reach the bottom of the page.
 
 ##### HTML
-``` /*Scroll to top button*/
+``` 
+/*Scroll to top button*/
 .scrollToTopBtn {
   background-color: bisque;
   border: 1px solid rgb(80, 62, 62);
@@ -179,10 +210,12 @@ function handleScroll() {
   cursor: pointer;
   font-size: 16px;
   line-height: 48px;
-  width: 48px; ```
+  width: 48px; 
+  ```
   
   ##### CSS
-  ``` /* place it at the bottom right corner */
+  ```
+  /* place it at the bottom right corner */
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -199,10 +232,12 @@ function handleScroll() {
 .showBtn {
   opacity: 1;
   transform: translateY(0)
-  } ```
+  } 
+  ```
   
   ##### JavaScript
-  ``` function scrollToTop() {
+  ```
+  function scrollToTop() {
   // Scroll to top
   rootElement.scrollTo({
     top: 0,
@@ -210,12 +245,15 @@ function handleScroll() {
   })
 }
 scrollToTopBtn.addEventListener("click", scrollToTop)
-document.addEventListener("scroll", handleScroll) ```
+document.addEventListener("scroll", handleScroll) 
+```
 
-### Other Skills Learned
+## Other Skills Learned
 
-##### -Identifying and working through bugs
-##### -Version control
-##### -Team development skills
+#####      -Identifying and working through bugs
+#####      -Version control
+#####      -Team development skills
+
+## Conclusion
 
 ##### This was a valuable learning experience. I learned how to use version control, how to debug a live site and gained practical knowledge in developing a usable site.
