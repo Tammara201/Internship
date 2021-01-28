@@ -1,13 +1,13 @@
-#Internship with Prosper IT Consulting
+# Internship with Prosper IT Consulting
 
-##Introduction
+## Introduction
 
-####As part of a 2-week sprint, I worked with a team developing a Lifestyle website using HTML, CSS and JavaScript. In addition I learned how to use Azure for version control and got experience in the Agile/Scrum methodologies.
+#### As part of a 2-week sprint, I worked with a team developing a Lifestyle website using HTML, CSS and JavaScript. In addition I learned how to use Azure for version control and got experience in the Agile/Scrum methodologies.
 
-####Below are descriptions of the tasks I worked on and a brief description of each. Examples of this work are below and more detailed examples can be found in the Code Example folder within the Portfolio repository.
+#### Below are descriptions of the tasks I worked on and a brief description of each. Examples of this work are below and more detailed examples can be found in the Code Example folder within the Portfolio repository.
 
-##Grid System
-Developed a grid system to display preparation recommendations.
+## Grid System
+#### Developed a grid system to display preparation recommendations.
 
 <section id="preparation">
                 <div class="container">
@@ -35,10 +35,10 @@ Developed a grid system to display preparation recommendations.
                 </div>
             </section>
 
-##Carousel
-####Created a carousel to show pictures and descriptions of various hikes.
+## Carousel
+### Created a carousel to show pictures and descriptions of various hikes.
 
-<div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+`<div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"></li>
                     <li data-bs-target="#carouselCaptions" data-bs-slide-to="1"></li>
@@ -100,12 +100,12 @@ Developed a grid system to display preparation recommendations.
     top: 0;
     left: 0;
     min-height: 500px;
-}
+}`
 
-##Modal and Sign Up Form with Functionality
-####Implemented an email sign up form and linked that to an email to receive notification of requests.
+## Modal and Sign Up Form with Functionality
+### Implemented an email sign up form and linked that to an email to receive notification of requests.
 
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+`<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -137,23 +137,23 @@ Developed a grid system to display preparation recommendations.
                     </div>                    
                 </div>
                 </div>
-            </div>
+            </div>`
 
-##Back to Top Button and Dark Theme
-####Created dark theme and back to top buttons.
+## Back to Top Button and Dark Theme
+### Created dark theme and back to top buttons.
 
-HTML
-<button onclick="darkFunction()" class="btn btn-sm btn-outline-secondary" style="z-index: 99;">Toggle dark mode</button>
+#### HTML
+`<button onclick="darkFunction()" class="btn btn-sm btn-outline-secondary" style="z-index: 99;">Toggle dark mode</button>`
 
-CSS
-/*Dark mode*/
+#### CSS
+`/*Dark mode*/
 body.dark-mode * {
   background-color: black;
   color: white;
-}
+}`
 
-JavaScript
-//Get the button scroll to top
+#### JavaScript
+`//Get the button scroll to top
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
 var rootElement = document.documentElement
 
@@ -167,10 +167,10 @@ function handleScroll() {
     // Hide button
     scrollToTopBtn.classList.remove("showBtn")
   }
-}
+}`
 
-HTML
-/*Scroll to top button*/
+#### HTML
+`/*Scroll to top button*/
 .scrollToTopBtn {
   background-color: bisque;
   border: 1px solid rgb(80, 62, 62);
@@ -179,10 +179,10 @@ HTML
   cursor: pointer;
   font-size: 16px;
   line-height: 48px;
-  width: 48px;
+  width: 48px;`
   
-  CSS
-  /* place it at the bottom right corner */
+  #### CSS
+  `/* place it at the bottom right corner */
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -199,10 +199,10 @@ HTML
 .showBtn {
   opacity: 1;
   transform: translateY(0)
-  }
+  }`
   
-  JavaScript
-  function scrollToTop() {
+  #### JavaScript
+  `function scrollToTop() {
   // Scroll to top
   rootElement.scrollTo({
     top: 0,
@@ -210,12 +210,12 @@ HTML
   })
 }
 scrollToTopBtn.addEventListener("click", scrollToTop)
-document.addEventListener("scroll", handleScroll)
+document.addEventListener("scroll", handleScroll)`
 
-##Other Skills Learned
+## Other Skills Learned
 
-####-Identifying and working through bugs
-####-Version control
-####-Team development skills
+#### -Identifying and working through bugs
+#### -Version control
+#### -Team development skills
 
-####This was a valuable learning experience. I learned how to use version control, how to debug a live site and gained practical knowledge in developing a usable site.
+#### This was a valuable learning experience. I learned how to use version control, how to debug a live site and gained practical knowledge in developing a usable site.
